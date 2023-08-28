@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SubMate</string>
+    <string name="image_content_description">violet background</string>
+    <string name="email_input">Your Email</string>
 </resources>
