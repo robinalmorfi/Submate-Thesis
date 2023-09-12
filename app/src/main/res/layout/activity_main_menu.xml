@@ -26,7 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:icon="@mipmap/ear_icon_foreground"
-            android:text="@string/deaf_button" />
+            android:text="@string/deaf_button"
+            app:backgroundTint="@color/sky_blue" />
 
         <View
             android:layout_width="match_parent"
@@ -38,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/healthy_speaker_button"
-            app:icon="@mipmap/speaking_icon_foreground" />
+            app:icon="@mipmap/speaking_icon_foreground"
+            app:backgroundTint="@color/sky_blue" />
     </LinearLayout>
 </RelativeLayout>

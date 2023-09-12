@@ -5,6 +5,8 @@
     <string name="name">Name</string>
     <string name="enter_name">Enter your Name</string>
     <string name="deaf_button">I am Hearing Impaired</string>
-    <string name="healthy_speaker_button">I am Healthy Speaker</string>
+    <string name="healthy_speaker_button">I am a Healthy Speaker</string>
+    <string name="deaf_menu">*Menu for Deaf Individuals*</string>
+    <string name="healthy_speaker_menu">*Menu for Healthy Speaker*</string>
     <!-- Strings used for fragments for navigation -->
 </resources>

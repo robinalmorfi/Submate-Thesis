@@ -10,7 +10,7 @@
         android:id="@+id/app_name_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/deaf_menu"
+        android:text="@string/healthy_speaker_menu"
         android:layout_centerInParent="true" />
 
 
