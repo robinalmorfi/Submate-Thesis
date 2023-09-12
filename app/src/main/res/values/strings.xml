@@ -4,9 +4,7 @@
     <string name="email_input">Your Email</string>
     <string name="name">Name</string>
     <string name="enter_name">Enter your Name</string>
-    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="deaf_button">I am Hearing Impaired</string>
+    <string name="healthy_speaker_button">I am Healthy Speaker</string>
     <!-- Strings used for fragments for navigation -->
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
