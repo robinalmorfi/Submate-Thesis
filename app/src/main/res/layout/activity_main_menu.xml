@@ -23,7 +23,7 @@
         <Button
             android:id="@+id/deaf_button"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-            android:layout_width="wrap_content"
+            android:layout_width="265dp"
             android:layout_height="wrap_content"
             app:icon="@mipmap/ear_icon_foreground"
             android:text="@string/deaf_button"

@@ -12,7 +12,14 @@ class MainMenu : AppCompatActivity() {
 
         val deafButton = findViewById<Button>(R.id.deaf_button)
         deafButton.setOnClickListener {
-            val Intent = Intent(this, DeafUser::class.java )
+            val intent = Intent(this, DeafUser::class.java )
+            startActivity(intent)
+        }
+
+        val hearingButton = findViewById<Button>(R.id.hearing_button)
+        hearingButton.setOnClickListener {
+            val intent = Intent(this, HealthySpeaker::class.java )
+            startActivity(intent)
         }
     }
 }
