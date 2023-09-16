@@ -8,5 +8,7 @@
     <string name="healthy_speaker_button">I am a Healthy Speaker</string>
     <string name="deaf_menu">*Menu for Deaf Individuals*</string>
     <string name="healthy_speaker_menu">*Menu for Healthy Speaker*</string>
+    <string name="hearing_button_description">Hearing button description</string>
+    <string name="name_back">Create name background</string>
     <!-- Strings used for fragments for navigation -->
 </resources>

@@ -6,33 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainMenu">
 
+    <Button
+        android:id="@+id/deaf_button"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:icon="@mipmap/ear_icon_foreground"
+        android:text="@string/deaf_button"
+        android:layout_marginBottom="8dp"
+        app:backgroundTint="@color/sky_blue" />
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="16dp" />
 
-        <Button
-            android:id="@+id/deaf_button"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-            android:layout_width="265dp"
-            android:layout_height="wrap_content"
-            app:icon="@mipmap/ear_icon_foreground"
-            android:text="@string/deaf_button"
-            app:backgroundTint="@color/sky_blue" />
+    <Button
+        android:id="@+id/hearing_button"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deaf_button"
+        android:layout_centerHorizontal="true"
+        android:text="@string/healthy_speaker_button"
+        app:icon="@mipmap/speaking_icon_foreground"
+        app:backgroundTint="@color/sky_blue"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/hearing_button_description" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="16dp" />
-
-        <Button
-            android:id="@+id/hearing_button"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/healthy_speaker_button"
-            app:icon="@mipmap/speaking_icon_foreground"
-            app:backgroundTint="@color/sky_blue" />
-    </LinearLayout>
 </RelativeLayout>
