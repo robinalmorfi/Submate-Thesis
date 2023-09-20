@@ -38,7 +38,7 @@ class MainMenu : AppCompatActivity() {
                 true
             }
             R.id.action_settings -> {
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
