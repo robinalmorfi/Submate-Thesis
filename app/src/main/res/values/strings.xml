@@ -10,5 +10,7 @@
     <string name="healthy_speaker_menu">*Menu for Healthy Speaker*</string>
     <string name="hearing_button_description">Hearing button description</string>
     <string name="name_back">Create name background</string>
+    <string name="options_settings">Settings</string>
+    <string name="options_profile">Profile</string>
     <!-- Strings used for fragments for navigation -->
 </resources>
