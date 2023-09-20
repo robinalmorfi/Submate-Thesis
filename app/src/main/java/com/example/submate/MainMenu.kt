@@ -34,14 +34,25 @@ class MainMenu : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.action_profile -> {
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
-                true
+                // Create an Intent to start the ProfileActivity
+                val profileIntent = Intent(this, Profile::class.java)
+
+                // Start the ProfileActivity
+                startActivity(profileIntent)
+
+                true // Return true to indicate that the event has been handled
             }
             R.id.action_settings -> {
-                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
-                true
+                // Create an Intent to start the SettingsActivity (replace with the actual name of your SettingsActivity)
+                val settingsIntent = Intent(this, Settings::class.java)
+
+                // Start the SettingsActivity
+                startActivity(settingsIntent)
+
+                true // Return true to indicate that the event has been handled
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }
