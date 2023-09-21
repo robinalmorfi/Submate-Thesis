@@ -9,6 +9,13 @@ import android.widget.Button
 class CreateName : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Hide the action bar (optional)
+        supportActionBar?.hide()
+
+        // Set the activity to full-screen and hide the navigation bar
+        hideSystemUI()
+
         setContentView(R.layout.activity_create_name)
 
         val confirmButton = findViewById<Button>(R.id.name_button)
@@ -16,5 +23,12 @@ class CreateName : AppCompatActivity() {
             val intent = Intent(this, MainMenu::class.java)
             startActivity(intent)
         }
+    }
+
+    @Suppress("DEPRECATION") // Suppress deprecated warning
+    private fun hideSystemUI() {
+        val decorView = window.decorView
+        decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN)
     }
 }

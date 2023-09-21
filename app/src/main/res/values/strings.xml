@@ -14,5 +14,6 @@
     <string name="options_profile">Profile</string>
     <string name="create_name">Enter your Name</string>
     <string name="confirm">Confirm</string>
+    <string name="app_logo_description">app logo</string>
     <!-- Strings used for fragments for navigation -->
 </resources>
