@@ -15,7 +15,7 @@ class MainMenu : AppCompatActivity() {
 
         val deafButton = findViewById<Button>(R.id.deaf_button)
         deafButton.setOnClickListener {
-            val intent = Intent(this, DeafUser::class.java )
+            val intent = Intent(this, Transcription::class.java )
             startActivity(intent)
         }
 
