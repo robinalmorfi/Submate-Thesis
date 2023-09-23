@@ -13,9 +13,6 @@ class CreateName : AppCompatActivity() {
         // Hide the action bar (optional)
         supportActionBar?.hide()
 
-        // Set the activity to full-screen and hide the navigation bar
-        hideSystemUI()
-
         setContentView(R.layout.activity_create_name)
 
         val confirmButton = findViewById<Button>(R.id.name_button)

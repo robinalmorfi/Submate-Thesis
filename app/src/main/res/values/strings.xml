@@ -15,7 +15,8 @@
     <string name="create_name">Enter your Name</string>
     <string name="confirm">Confirm</string>
     <string name="app_logo_description">app logo</string>
-    <string name="type_a_message">Type a message</string>
+    <string name="type_a_message">Message</string>
     <string name="time_and_date">Time and Date</string>
+    <string name="robin_almorfi">Robin Almorfi</string>
     <!-- Strings used for fragments for navigation -->
 </resources>
