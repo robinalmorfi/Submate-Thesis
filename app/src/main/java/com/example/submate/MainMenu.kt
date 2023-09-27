@@ -21,7 +21,7 @@ class MainMenu : AppCompatActivity() {
 
         val hearingButton = findViewById<Button>(R.id.hearing_button)
         hearingButton.setOnClickListener {
-            val intent = Intent(this, HealthySpeaker::class.java )
+            val intent = Intent(this, Speech::class.java )
             startActivity(intent)
         }
     }
@@ -35,7 +35,7 @@ class MainMenu : AppCompatActivity() {
         return when(item.itemId){
             R.id.action_profile -> {
                 // Create an Intent to start the ProfileActivity
-                val profileIntent = Intent(this, Profile::class.java)
+                val profileIntent = Intent(this, UserProfile::class.java)
 
                 // Start the ProfileActivity
                 startActivity(profileIntent)
@@ -54,5 +54,4 @@ class MainMenu : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
 }

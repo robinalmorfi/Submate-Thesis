@@ -13,7 +13,7 @@ class SplashScreen : AppCompatActivity() {
         val ivNote: ImageView = findViewById(R.id.iv_note)
         ivNote.alpha = 0f
         ivNote.animate().setDuration(1500).alpha(1f).withEndAction {
-            val i = Intent(this@SplashScreen, CreateName::class.java)
+            val i = Intent(this@SplashScreen, UserSetup::class.java)
             startActivity(i)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()

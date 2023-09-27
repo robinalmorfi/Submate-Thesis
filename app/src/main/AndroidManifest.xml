@@ -12,6 +12,24 @@
         android:theme="@style/Theme.SubMate"
         tools:targetApi="31">
         <activity
+            android:name=".UserSetup"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsSettings"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileSettings"
+            android:exported="false" />
+        <activity
+            android:name=".Speech"
+            android:exported="false" />
+        <activity
             android:name=".UserScanner"
             android:exported="false" />
         <activity
@@ -19,9 +37,6 @@
             android:exported="false" />
         <activity
             android:name=".Settings"
-            android:exported="false" />
-        <activity
-            android:name=".Profile"
             android:exported="false" />
         <activity
             android:name=".CreateName"

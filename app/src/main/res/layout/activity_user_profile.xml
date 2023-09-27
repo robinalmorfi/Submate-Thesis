@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile">
+    tools:context=".UserProfile">
 
     <TextView
         android:id="@+id/app_name_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/deaf_menu"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="205dp"
+        tools:layout_editor_absoluteY="285dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

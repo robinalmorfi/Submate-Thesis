@@ -18,5 +18,8 @@
     <string name="type_a_message">Message</string>
     <string name="time_and_date">Time and Date</string>
     <string name="robin_almorfi">Robin Almorfi</string>
+    <string name="profile">Profile</string>
+    <string name="set_your_name_and_profile">Set your name and Profile</string>
+    <string name="continue_btn">Continue</string>
     <!-- Strings used for fragments for navigation -->
 </resources>

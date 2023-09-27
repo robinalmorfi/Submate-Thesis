@@ -9,13 +9,13 @@
     <Button
         android:id="@+id/deaf_button"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="230dp"
+        android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/deaf_button"
         android:layout_marginBottom="8dp"
-        app:backgroundTint="@color/sky_blue"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="@string/deaf_button"
+        app:backgroundTint="@color/sky_blue" />
 
     <View
         android:layout_width="match_parent"
