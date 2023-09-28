@@ -23,5 +23,6 @@
     <string name="continue_btn">Continue</string>
     <string name="textview">TextView</string>
     <string name="todo">TODO</string>
+    <string name="save">Save</string>
     <!-- Strings used for fragments for navigation -->
 </resources>

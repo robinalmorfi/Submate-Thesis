@@ -14,8 +14,9 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="8dp"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="@string/deaf_button"
-        app:backgroundTint="@color/sky_blue" />
+        app:backgroundTint="@color/blue" />
 
     <View
         android:layout_width="match_parent"
@@ -28,8 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/deaf_button"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:text="@string/healthy_speaker_button"
-        app:backgroundTint="@color/sky_blue"
+        app:backgroundTint="@color/blue"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/hearing_button_description" />
 
