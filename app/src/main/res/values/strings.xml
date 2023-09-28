@@ -21,5 +21,7 @@
     <string name="profile">Profile</string>
     <string name="set_your_name_and_profile">Set your name and Profile</string>
     <string name="continue_btn">Continue</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
     <!-- Strings used for fragments for navigation -->
 </resources>
