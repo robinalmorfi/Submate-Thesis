@@ -5,23 +5,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.Toast
+import android.view.View
 
-class MainMenu : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_menu)
+        setContentView(R.layout.activity_main)
 
-        val deafButton = findViewById<Button>(R.id.deaf_button)
-        deafButton.setOnClickListener {
-            val intent = Intent(this, Transcription::class.java )
+        // Find the LinearLayouts by their IDs
+        val deafLayout = findViewById<View>(R.id.deafLayout)
+        val speakerLayout = findViewById<View>(R.id.speakerLayout)
+
+        // Set an OnClickListener for the "deafLayout"
+        deafLayout.setOnClickListener {
+            // Define the action to open the Transcription activity here
+            val intent = Intent(this@MainActivity, Transcription::class.java)
             startActivity(intent)
         }
 
-        val hearingButton = findViewById<Button>(R.id.hearing_button)
-        hearingButton.setOnClickListener {
-            val intent = Intent(this, Speech::class.java )
+        // Set an OnClickListener for the "speakerLayout"
+        speakerLayout.setOnClickListener {
+            // Define the action to open the Healthy activity here
+            val intent = Intent(this@MainActivity, Speech::class.java)
             startActivity(intent)
         }
     }
@@ -39,15 +44,6 @@ class MainMenu : AppCompatActivity() {
 
                 // Start the ProfileActivity
                 startActivity(profileIntent)
-
-                true // Return true to indicate that the event has been handled
-            }
-            R.id.action_settings -> {
-                // Create an Intent to start the SettingsActivity (replace with the actual name of your SettingsActivity)
-                val settingsIntent = Intent(this, Settings::class.java)
-
-                // Start the SettingsActivity
-                startActivity(settingsIntent)
 
                 true // Return true to indicate that the event has been handled
             }

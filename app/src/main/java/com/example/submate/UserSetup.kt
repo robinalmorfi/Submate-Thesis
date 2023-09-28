@@ -24,7 +24,7 @@ class UserSetup : AppCompatActivity() {
             val enteredName = nameEditText.text.toString()
 
             // Create an Intent to start the MainMenu activity
-            val intent = Intent(this, MainMenu::class.java)
+            val intent = Intent(this, MainActivity::class.java)
 
             // Add the entered name as an extra to the Intent
             intent.putExtra("name", enteredName)

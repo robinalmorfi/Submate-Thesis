@@ -4,8 +4,5 @@
     <item
         android:id="@+id/action_profile"
         android:title="@string/options_profile" />
-    <item
-        android:id="@+id/action_settings"
-        android:title="@string/options_settings" />
     <!-- Add more menu items here -->
 </menu>

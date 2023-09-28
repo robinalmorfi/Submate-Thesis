@@ -37,7 +37,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/topBackground"
                             android:layout_width="445dp"
                             android:layout_height="307dp"
                             android:contentDescription="@string/todo"
@@ -49,7 +49,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/userProfile2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="25dp"
@@ -69,9 +69,9 @@
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView"
-                        app:layout_constraintStart_toStartOf="@+id/imageView"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/userProfile2"
+                        app:layout_constraintStart_toStartOf="@+id/userProfile2"
+                        app:layout_constraintTop_toBottomOf="@+id/userProfile2"
                         tools:ignore="VisualLintOverlap" />
 
                     <LinearLayout
@@ -90,18 +90,95 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView2"
-                        app:layout_constraintVertical_bias="1.0"/>
+                        app:layout_constraintVertical_bias="1.0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/avatar"
+                                android:textColor="@color/sky_blue"
+                                android:textSize="18sp"/>
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/change"
+                                android:textSize="16sp"
+                                android:textAlignment="viewEnd"
+                                android:textColor="#5B5B5B"/>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+                            android:layout_margin="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/username"
+                                android:textColor="@color/sky_blue"
+                                android:textSize="18sp"/>
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/change"
+                                android:textSize="16sp"
+                                android:textAlignment="viewEnd"
+                                android:textColor="#5B5B5B"/>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+                            android:layout_margin="10dp"
+                            />
+
+                    </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/save"
                 android:layout_margin="24dp"
-                android:background="@drawable/button2"
-                android:text="@string/save" />
+                android:background="@drawable/button2"/>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
