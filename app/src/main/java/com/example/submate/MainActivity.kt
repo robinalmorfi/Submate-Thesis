@@ -37,12 +37,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId){
+        return when (item.itemId) {
             R.id.action_profile -> {
-                // Create an Intent to start the ProfileActivity
+                // Retrieve the entered name from the extras
+                val enteredName = intent.getStringExtra("name")
+
+                // Create an Intent to start the UserProfileActivity
                 val profileIntent = Intent(this, UserProfile::class.java)
 
-                // Start the ProfileActivity
+                // Add the entered name as an extra to the Intent
+                profileIntent.putExtra("name", enteredName)
+
+                // Start the UserProfileActivity
                 startActivity(profileIntent)
 
                 true // Return true to indicate that the event has been handled
