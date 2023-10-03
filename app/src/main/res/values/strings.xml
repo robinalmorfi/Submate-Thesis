@@ -27,5 +27,6 @@
     <string name="avatar">Avatar</string>
     <string name="change">Change</string>
     <string name="username">Username</string>
+    <string name="enter_new_username">Enter your new username</string>
     <!-- Strings used for fragments for navigation -->
 </resources>

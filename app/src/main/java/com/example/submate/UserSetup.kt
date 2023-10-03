@@ -1,15 +1,19 @@
 package com.example.submate
 
+import android.Manifest
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
+import android.provider.MediaStore
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import de.hdodenhof.circleimageview.CircleImageView
-import android.provider.MediaStore
-import android.os.Environment
-import android.net.Uri
-import android.util.Log
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -20,6 +24,7 @@ import java.util.*
 class UserSetup : AppCompatActivity() {
     private lateinit var userImage: CircleImageView
     private var selectedImageUri: Uri? = null
+    private val defaultImageResId = R.mipmap.man_foreground // Default image resource ID
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +34,12 @@ class UserSetup : AppCompatActivity() {
 
         userImage = findViewById(R.id.userImage)
 
+        // Set the default image to the CircleImageView
+        userImage.setImageResource(defaultImageResId)
+
         // Set an OnClickListener for the profile image
         userImage.setOnClickListener {
-            openGalleryForImage()
+            checkGalleryPermission()
         }
 
         val confirmButton = findViewById<Button>(R.id.continue_button)
@@ -41,11 +49,18 @@ class UserSetup : AppCompatActivity() {
             // Get the name entered in the EditText
             val enteredName = nameEditText.text.toString()
 
+            // Generate a random username if no text is entered
+            val username = if (enteredName.isNotEmpty()) {
+                enteredName
+            } else {
+                generateRandomUsername()
+            }
+
             // Create an Intent to start the MainActivity
             val intent = Intent(this, MainActivity::class.java)
 
-            // Add the entered name as an extra to the Intent
-            intent.putExtra("name", enteredName)
+            // Add the username as an extra to the Intent
+            intent.putExtra("name", username)
 
             // Add the selected image URI as an extra to the Intent
             if (selectedImageUri != null) {
@@ -57,12 +72,29 @@ class UserSetup : AppCompatActivity() {
         }
     }
 
+    private fun checkGalleryPermission() {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // Permission is not granted, request it
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                IMAGE_PICK_REQUEST
+            )
+        } else {
+            // Permission is already granted, you can open the gallery
+            openGalleryForImage()
+        }
+    }
+
     private fun openGalleryForImage() {
         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         startActivityForResult(intent, IMAGE_PICK_REQUEST)
     }
 
-    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -94,10 +126,18 @@ class UserSetup : AppCompatActivity() {
     }
 
     private fun createImageFile(): File {
-        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val timeStamp =
+            SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
         val imageFileName = "JPEG_${timeStamp}_"
         val storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         return File.createTempFile(imageFileName, ".jpg", storageDir)
+    }
+
+    private fun generateRandomUsername(): String {
+        // Generate a random username, e.g., "User123"
+        val random = Random()
+        val randomNumber = random.nextInt(1000) // Generate a random number between 0 and 999
+        return "User$randomNumber"
     }
 
     companion object {
