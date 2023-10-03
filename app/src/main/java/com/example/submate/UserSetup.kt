@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import de.hdodenhof.circleimageview.CircleImageView
-import android.view.View
 import android.provider.MediaStore
 import android.os.Environment
 import android.net.Uri
