@@ -48,17 +48,18 @@
                             app:layout_constraintEnd_toEndOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/userProfile2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
                         android:paddingTop="25dp"
-                        android:layout_marginTop="32dp"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:srcCompat="@mipmap/man_foreground"
                         android:contentDescription="@string/todo"
                         tools:ignore="MissingConstraints" />
+
 
                     <TextView
                         android:id="@+id/textView2"

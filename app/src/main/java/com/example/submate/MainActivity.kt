@@ -42,13 +42,19 @@ class MainActivity : AppCompatActivity() {
                 // Retrieve the entered name from the extras
                 val enteredName = intent.getStringExtra("name")
 
-                // Create an Intent to start the UserProfileActivity
+                // Create an Intent to start the UserProfile activity
                 val profileIntent = Intent(this, UserProfile::class.java)
 
                 // Add the entered name as an extra to the Intent
                 profileIntent.putExtra("name", enteredName)
 
-                // Start the UserProfileActivity
+                // Add the selected image URI as an extra to the Intent
+                val selectedImageUriString = intent.getStringExtra("profile_image_uri")
+                if (selectedImageUriString != null) {
+                    profileIntent.putExtra("profile_image_uri", selectedImageUriString)
+                }
+
+                // Start the UserProfile activity
                 startActivity(profileIntent)
 
                 true // Return true to indicate that the event has been handled

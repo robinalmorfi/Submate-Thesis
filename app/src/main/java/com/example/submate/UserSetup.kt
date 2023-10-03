@@ -9,13 +9,14 @@ import de.hdodenhof.circleimageview.CircleImageView
 import android.provider.MediaStore
 import android.os.Environment
 import android.net.Uri
+import android.util.Log
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
-
+@Suppress("DEPRECATION")
 class UserSetup : AppCompatActivity() {
     private lateinit var userImage: CircleImageView
     private var selectedImageUri: Uri? = null
@@ -40,7 +41,7 @@ class UserSetup : AppCompatActivity() {
             // Get the name entered in the EditText
             val enteredName = nameEditText.text.toString()
 
-            // Create an Intent to start the MainMenu activity
+            // Create an Intent to start the MainActivity
             val intent = Intent(this, MainActivity::class.java)
 
             // Add the entered name as an extra to the Intent
@@ -51,7 +52,7 @@ class UserSetup : AppCompatActivity() {
                 intent.putExtra("profile_image_uri", selectedImageUri.toString())
             }
 
-            // Start the MainMenu activity
+            // Start the MainActivity
             startActivity(intent)
         }
     }
@@ -61,6 +62,7 @@ class UserSetup : AppCompatActivity() {
         startActivityForResult(intent, IMAGE_PICK_REQUEST)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -81,6 +83,9 @@ class UserSetup : AppCompatActivity() {
 
                     // Display the selected image in the userImage ImageView
                     userImage.setImageURI(selectedImageUri)
+
+                    // Add a log statement to check the selectedImageUri
+                    Log.d("UserSetup", "Selected image URI: $selectedImageUri")
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
