@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "439169997818",
+    "project_id": "submate-47702",
+    "storage_bucket": "submate-47702.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439169997818:android:e4505db61c82e3546b2243",
+        "android_client_info": {
+          "package_name": "com.example.submate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACdqTZowLRjISUni-q9Vr_z0Jo3u1s8Uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
