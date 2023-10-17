@@ -1,29 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('C:\\Users\\Acer\\AndroidStudioProjects\\SubMate\\app\\release\\SubMate.jks')
-            storePassword 'creidne'
-            keyAlias 'key0'
-            keyPassword 'caelum'
-        }
-        release {
-            storeFile file('C:\\Users\\Acer\\AndroidStudioProjects\\SubMate\\app\\release\\SubMate.jks')
-            storePassword 'creidne'
-            keyAlias 'key0'
-            keyPassword 'caelum'
-        }
-        config {
-            storeFile file('C:\\Users\\Acer\\AndroidStudioProjects\\SubMate\\app\\release\\SubMate.jks')
-            storePassword 'creidne'
-            keyAlias 'key0'
-            keyPassword 'caelum'
-        }
+    packagingOptions{
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/INDEX.LIST'
     }
+
     namespace 'com.example.submate'
     compileSdk 34
 
@@ -63,9 +49,16 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.7.3'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.cloud:google-cloud-speech:1.29.1'
+    implementation 'com.google.auth:google-auth-library-oauth2-http:0.26.0'
+    implementation 'io.grpc:grpc-okhttp:1.38.1'
+    implementation 'io.grpc:grpc-stub:1.38.1'
+    implementation 'com.google.api:gax:1.58.0'
 }

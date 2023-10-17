@@ -1,11 +1,13 @@
 package com.example.submate
 
+import Transcription
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,19 +18,15 @@ class MainActivity : AppCompatActivity() {
         val deafLayout = findViewById<View>(R.id.deafLayout)
         val speakerLayout = findViewById<View>(R.id.speakerLayout)
 
-        // Set an OnClickListener for the "deafLayout"
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true)
+
+        // Set an OnClickListener for the "chatLayout"
         deafLayout.setOnClickListener {
             // Define the action to open the Transcription activity here
             val intent = Intent(this@MainActivity, Transcription::class.java)
             startActivity(intent)
         }
 
-        // Set an OnClickListener for the "speakerLayout"
-        speakerLayout.setOnClickListener {
-            // Define the action to open the Healthy activity here
-            val intent = Intent(this@MainActivity, Speech::class.java)
-            startActivity(intent)
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
