@@ -1,32 +1,18 @@
+package com.example.submate
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.submate.FirebaseHelper
-import com.example.submate.Message
-
+import android.os.Bundle
+import android.view.View
 
 class Transcription : AppCompatActivity() {
-
-    // ... Your existing code ...
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)  // Add this line
-        // ... Your existing initialization code ...
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_chat)
 
-        // Setup message listener
-        FirebaseHelper.setupMessageListener { message ->
-            runOnUiThread {
-                displayMessage(message)
-            }
+        val imageBack = findViewById<View>(R.id.imageBack)
+
+        imageBack.setOnClickListener {
+            onBackPressed()
         }
     }
-
-    private fun displayMessage(message: Message) {
-        // Update your UI to display the message
-    }
-
-    private fun sendMessage(messageContent: String, sender: String) {
-        FirebaseHelper.sendMessage(messageContent, sender)
-    }
-
 }

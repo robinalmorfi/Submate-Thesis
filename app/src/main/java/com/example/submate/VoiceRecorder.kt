@@ -31,7 +31,7 @@ class VoiceRecorder(private val callback: Callback) {
 
         audioRecord?.startRecording()
         isRecording = true
-
+// testing
         thread(start = true) {
             val buffer = ByteArray(BUFFER_SIZE)
             while (isRecording) {
