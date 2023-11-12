@@ -1,5 +1,6 @@
 package com.example.submate
 
+import Transcription
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,12 +24,6 @@ class MainActivity : AppCompatActivity() {
         deafLayout.setOnClickListener {
             // Define the action to open the Transcription activity here
             val intent = Intent(this@MainActivity, Transcription::class.java)
-            startActivity(intent)
-        }
-
-        speakerLayout.setOnClickListener {
-            // Define the action to open the Healthy activity here
-            val intent = Intent(this@MainActivity, Speech::class.java)
             startActivity(intent)
         }
 
